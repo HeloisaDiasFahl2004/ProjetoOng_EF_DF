@@ -14,13 +14,13 @@ namespace ProjetoOng_EF_DF.Controllers
         {
             Pet pet = new Pet();
             Console.WriteLine("Família: ");
-            pet.Familia = Console.ReadLine();
+            pet.Familia = Console.ReadLine().ToUpper();
             Console.WriteLine("Raça: ");
-            pet.Raca = Console.ReadLine();
+            pet.Raca = Console.ReadLine().ToUpper();
             Console.WriteLine("Sexo: ");
-            pet.Sexo = Console.ReadLine();
+            pet.Sexo = Console.ReadLine().ToUpper();
             Console.WriteLine("Nome: ");
-            pet.Nome = Console.ReadLine();
+            pet.Nome = Console.ReadLine().ToUpper();
             Console.WriteLine("Situação: D");
             pet.Situacao = "D";
             new ServicePet().Insert(pet);
@@ -32,6 +32,20 @@ namespace ProjetoOng_EF_DF.Controllers
         public void SelectDisponiveis()
         {
             new ServicePet().SelectDisponiveis();
+        }
+        public void Update()
+        {
+            Pet pet = new Pet();
+            Console.WriteLine("CHIP: ");
+            pet.CHIP = int.Parse(Console.ReadLine());
+            new ServicePet().Update(pet);
+        }
+        public void Delet()
+        {
+            Pet pet = new Pet();
+            Console.WriteLine("CHIP: ");
+            pet.CHIP = int.Parse(Console.ReadLine());
+            new ServicePet().Delet(pet);
         }
     }
 }

@@ -11,7 +11,7 @@ namespace ProjetoOng_EF_DF.Repository
         void Insert();
         void Select();
         void SelectDisponiveis();
-      //  void Update();
-      //  void Delet();
+        void Update();
+        void Delet();
     }
 }
