@@ -18,11 +18,10 @@ namespace ProjetoOng_EF_DF.View
                 Console.Clear();
                 Console.WriteLine("\t<<< MENU ADOTANTE >>>");
                 Console.WriteLine("\t 0-Retornar ao menu principal");
-                Console.WriteLine("\t 1-Cadastrar Adotante");
+                Console.WriteLine("\t 1-Cadastrar Adotante");//ok
                 Console.WriteLine("\t 2-Editar Adotante");//
                 Console.WriteLine("\t 3-Deletar Adotante");
                 Console.WriteLine("\t 4-Exibir todos Adotantes");// ok
-                Console.WriteLine("\t 5-Adotante já cadastrado");// ok
                 Console.Write("\t Escolha uma opção: ");
                 opc = int.Parse(Console.ReadLine());
 
@@ -38,12 +37,25 @@ namespace ProjetoOng_EF_DF.View
                         Console.WriteLine(">>> FIM CADASTRAMENTO <<< ");
                         Console.ReadKey();
                         break;
+                    case 2:
+                        Console.WriteLine(">>> INICIO ATUALIZAÇÃO <<< ");
+                        ca.Update();
+                        Console.WriteLine(">>> FIM ATUALIZAÇÃO <<< ");
+                        Console.ReadKey();
+                        break;
+                    case 3:
+                        Console.WriteLine(">>> INICIO DELEÇÃO <<< ");
+                        ca.Delet();
+                        Console.WriteLine(">>> FIM DELEÇÃO <<< ");
+                        Console.ReadKey();
+                        break;
                     case 4:
                         Console.WriteLine(">>> INICIO IMPRESSÃO <<< ");
                         ca.Select();
                         Console.WriteLine("\n>>> FIM IMPRESSÃO <<< ");
                         Console.ReadKey();
                         break;
+                   
                 }
             } while (opc != 0);
 

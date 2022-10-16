@@ -43,6 +43,8 @@ namespace ProjetoOng_EF_DF.Controllers
             adotante.Nome = Console.ReadLine().ToUpper();
             Console.WriteLine("CPF: ");
             adotante.CPF = Console.ReadLine().ToUpper();
+            Console.WriteLine("Data de Nascimento: ");
+            adotante.DataNascimento = DateTime.Parse(Console.ReadLine());
             Console.WriteLine("Sexo: ");
             adotante.Sexo = Console.ReadLine().ToUpper();
             Console.WriteLine("Telefone: ");
@@ -77,13 +79,30 @@ namespace ProjetoOng_EF_DF.Controllers
                 Console.WriteLine(item.ToString());
             }
         }
-        public void SelectOne()
+        public Adotante SelectOne()
         {
-
+            Adotante adotante = new Adotante();
+            Console.WriteLine("CPF: ");
+            adotante.CPF = Console.ReadLine();
+            return new ServiceAdotante().SelectOne(adotante);
         }
         public void Update()
         {
-
+           var ad= SelectOne();
+            if (ad != null)
+            {
+                new ServiceAdotante().Update(ad);
+            }
+            return;
+        }
+        public void Delet()
+        {
+            var ad = SelectOne();
+            if (ad != null)
+            {
+                new ServiceAdotante().Delet(ad);
+            }
+            return;
         }
     }
 }

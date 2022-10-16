@@ -65,9 +65,9 @@ namespace ProjetoOng_EF_DF
         public override string ToString()
         {
             return "\nNome: " + this.Nome + "\nCPF: " + this.CPF + "\nChip Pet: " + this.ChipPet + "\nData Adoção: " +this.DataAdocao
-                + "\n >>> Outras informações sobre o adotante <<< \n -Endereço " + "\nLogradouro: "+this.Logradouro + "\t" + "N°"+this.Numero + "\nBairro" +this.Bairro 
-                + "\nComplemento: "+ this.Complemento+"\nCidade: "+this.Cidade+"\nEstado:"+this.Estado+"\nCEP: "+this.CEP+
-                "\nTelefone/Celular: "+this.Telefone;
+                + "\n >>> Outras informações sobre o adotante <<< \n -Endereço " + "\nLogradouro: "+this.Logradouro + "\t" + "Número: "+this.Numero + "\nBairro: " +this.Bairro 
+                + "\nComplemento: "+ this.Complemento+"\nCidade: "+this.Cidade+"\nEstado: "+this.Estado+"\nCEP: "+this.CEP+
+                "\nTelefone/Celular: "+this.Telefone+"\nData Nascimento: "+this.DataNascimento;
              
         }
 
