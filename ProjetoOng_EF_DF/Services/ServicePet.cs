@@ -48,9 +48,12 @@ namespace ProjetoOng_EF_DF.Services
         {
             var context = new ModelDB();
             var p = context.Pet.ToList();
-            foreach (var item in p)
+          for(int i = 0; i < p.Count; i++)
             {
-                p.Where(x => x.Situacao == "D").ToList().ForEach(x => Console.WriteLine(x));
+                if (p[i].Situacao == "D")
+                {
+                    Console.WriteLine(p[i].ToString()); ;
+                }
             }
         }
         public void Update(Pet pet)
