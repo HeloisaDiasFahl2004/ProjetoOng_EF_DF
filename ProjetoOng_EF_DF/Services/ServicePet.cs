@@ -44,6 +44,7 @@ namespace ProjetoOng_EF_DF.Services
                 return find;
             }
         }
+
         public void SelectDisponiveis()
         {
             var context = new ModelDB();
