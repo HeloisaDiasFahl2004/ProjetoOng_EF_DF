@@ -60,12 +60,13 @@ namespace ProjetoOng_EF_DF
         public DateTime DataAdocao { get; set; }
 
         public virtual Pet Pet { get; set; }
+      
 
         public override string ToString()
         {
-            return "\nNome: " + this.Nome + "\nCPF: " + this.CPF + "\nChip Pet: " + this.ChipPet + "\nData Adoção: " + this.DataAdocao
+            return "\nNome: " + this.Nome + "\nCPF: " + this.CPF + "\nChip Pet: " + this.ChipPet + "\nData Adoção: " +this.DataAdocao
                 + "\n >>> Outras informações sobre o adotante <<< \n -Endereço " + "\nLogradouro: "+this.Logradouro + "\t" + "N°"+this.Numero + "\nBairro" +this.Bairro 
-                + "\nComplemento: "+ this.Complemento+"\nCidade: "+this.Cidade+"\nEstado(ex:SP):"+this.Estado+"\nCEP: "+this.CEP+
+                + "\nComplemento: "+ this.Complemento+"\nCidade: "+this.Cidade+"\nEstado:"+this.Estado+"\nCEP: "+this.CEP+
                 "\nTelefone/Celular: "+this.Telefone;
              
         }

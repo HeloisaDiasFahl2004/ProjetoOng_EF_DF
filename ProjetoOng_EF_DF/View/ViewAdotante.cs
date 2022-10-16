@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoOng_EF_DF.Controllers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace ProjetoOng_EF_DF.View
 {
    internal class ViewAdotante
     {
+        ControllerAdotante ca=new ControllerAdotante();
         public void MenuAdotante()
         {
             int opc;
@@ -30,7 +32,17 @@ namespace ProjetoOng_EF_DF.View
                         ViewPrincipal vipr=new ViewPrincipal();
                         vipr.Menu();
                         break;
-                    case 1: 
+                    case 1:
+                        Console.WriteLine(">>> INICIO CADASTRAMENTO <<< ");
+                        ca.Insert();
+                        Console.WriteLine(">>> FIM CADASTRAMENTO <<< ");
+                        Console.ReadKey();
+                        break;
+                    case 4:
+                        Console.WriteLine(">>> INICIO IMPRESSÃO <<< ");
+                        ca.Select();
+                        Console.WriteLine("\n>>> FIM IMPRESSÃO <<< ");
+                        Console.ReadKey();
                         break;
                 }
             } while (opc != 0);

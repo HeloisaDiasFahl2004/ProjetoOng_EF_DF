@@ -55,6 +55,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\202210152057333_InitialMiration.cs" />
+    <Compile Include="Migrations\202210152057333_InitialMiration.designer.cs">
+      <DependentUpon>202210152057333_InitialMiration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210152111087_Metodos.cs" />
+    <Compile Include="Migrations\202210152111087_Metodos.designer.cs">
+      <DependentUpon>202210152111087_Metodos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Adotante.cs" />
     <Compile Include="Controllers\ControllerAdotante.cs" />
     <Compile Include="Controllers\ControllerPet.cs" />
@@ -74,7 +83,14 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202210152057333_InitialMiration.resx">
+      <DependentUpon>202210152057333_InitialMiration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210152111087_Metodos.resx">
+      <DependentUpon>202210152111087_Metodos.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

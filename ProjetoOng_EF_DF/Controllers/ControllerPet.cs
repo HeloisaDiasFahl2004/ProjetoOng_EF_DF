@@ -29,6 +29,13 @@ namespace ProjetoOng_EF_DF.Controllers
         {
             new ServicePet().Select();
         }
+        public Pet SelectOne()
+        {
+            Pet pet = new Pet();
+            Console.WriteLine("Chip Pet: ");
+            pet.CHIP = int.Parse(Console.ReadLine());
+            return new ServicePet().SelectOne(pet);
+        }
         public void SelectDisponiveis()
         {
             new ServicePet().SelectDisponiveis();

@@ -10,6 +10,7 @@ namespace ProjetoOng_EF_DF.Repository
     {
         void Insert();
         void Select();
+        Pet SelectOne();
         void SelectDisponiveis();
         void Update();
         void Delet();

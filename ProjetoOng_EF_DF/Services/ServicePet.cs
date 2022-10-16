@@ -18,6 +18,7 @@ namespace ProjetoOng_EF_DF.Services
                 context.Pet.Add(pet);
                 context.SaveChanges();
                 Console.WriteLine("Pet cadastrado com sucesso!");
+                Console.ReadKey();
             }
         }
         public void Select()
@@ -27,6 +28,20 @@ namespace ProjetoOng_EF_DF.Services
             foreach (var item in p)
             {
                 Console.WriteLine(item.ToString());
+            }
+        }
+        public Pet SelectOne(Pet pet)
+        {
+            using (var context = new ModelDB())
+            {
+                var find = context.Pet.FirstOrDefault(p => p.CHIP == pet.CHIP);
+                if (find == null)
+                {
+                    Console.WriteLine("\nPet não encontrado!");
+                    Console.ReadKey();
+                  return null;
+                }
+                return find;
             }
         }
         public void SelectDisponiveis()

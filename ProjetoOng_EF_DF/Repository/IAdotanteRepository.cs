@@ -8,5 +8,10 @@ namespace ProjetoOng_EF_DF.Repository
 {
     internal interface IAdotanteRepository
     {
+        void Insert();
+        void Select();
+        //void SelectDisponiveis();
+        //void Update();
+        //void Delet();
     }
 }
